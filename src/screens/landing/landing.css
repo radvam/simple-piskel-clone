@@ -1,0 +1,394 @@
+@font-face {
+  font-family: "HangingLetters";
+  src: url("./assets/fonts/HangingLetters.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NokiaCellphone";
+  src: url("./assets/fonts/NokiaCellphone.ttf") format("truetype");
+}
+
+body {
+  background-color: #222222;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #2D2D2D;
+  border-bottom: 1px solid black;
+  padding: 5px 15px 5px 15px;
+}
+
+.header_link-logo {
+  text-decoration: none;
+}
+
+.header_logo {
+  font-family: 'HangingLetters';
+  color: white;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin: 0;
+  padding: 0;
+}
+
+.header_logo:hover {
+  cursor: pointer;
+  color: #e9d87c;
+}
+
+.header_buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.header_sprite-button {
+  color: black;
+  font-weight: bold;
+  background-color: #FFD700;
+  border-radius: 3px;
+  height: 36px;
+}
+
+.header_sprite-button:hover {
+  cursor: pointer;
+  background-color: #e9d87c;
+}
+
+main {
+  padding: 0;
+  margin: 0;
+}
+
+main .screenshots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #505050;
+  width: 80%;
+  height: 100%;
+  padding-top: 10px;
+  padding-right: 45px;
+  border-bottom-right-radius: 20px;
+  margin-bottom: 10px;
+}
+
+main .screenshots .block-title {
+  width: 40%;
+  padding: 20px;
+}
+
+main .screenshots .block-title_text {
+  font-family: 'Teko', sans-serif;
+  font-size: 40px;
+  letter-spacing: 0.02em;
+  color: white;
+  margin: 0;
+}
+
+main .screenshots .block-title_text .block-title_simple-piskel {
+  font-family: "NokiaCellphone";
+  font-size: 53px;
+  color: #e9d87c;
+}
+
+main .screenshots .block-title_nav .screenshots_sprite-button {
+  color: #383434;
+  font-weight: bold;
+  font-size: 24px;
+  background-color: #FFD700;
+  border-radius: 7px;
+  height: 55px;
+}
+
+main .screenshots .block-title_nav .screenshots_sprite-button:hover {
+  cursor: pointer;
+  background-color: #e9d87c;
+}
+
+main .screenshots_img {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  height: 306px;
+  width: 490px;
+  background: url("./assets/images/screenshot-main.jpg") center center/contain no-repeat;
+}
+
+main .animations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 45%;
+  height: 100%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+main .animations_title {
+  text-align: center;
+  font-family: "NokiaCellphone";
+  font-weight: normal;
+  font-size: 40px;
+  color: #e9d87c;
+}
+
+main .animations .sprite {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main .animations_sprites {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+main .animations_sprites .sprite_item {
+  border: 4px solid #888888;
+  border-radius: 3px;
+  width: 120px;
+  height: 120px;
+  background-color: brown;
+}
+
+main .animations_sprites .sprite_item-bg {
+  margin-bottom: 10px;
+  background-image: url(./assets/images/canvas-background.png);
+}
+
+main .animations_sprites .first-sprite {
+  background: url("./assets/images/megaman.gif") center center/contain no-repeat;
+}
+
+main .animations_sprites .second-sprite {
+  background: url("./assets/images/transfusion.gif") center center/contain no-repeat;
+}
+
+main .animations_sprites .third-sprite {
+  background: url("./assets/images/panda.gif") center center/contain no-repeat;
+}
+
+main .animations_sprites .fourth-sprite {
+  background: url("./assets/images/llama.gif") center center/contain no-repeat;
+}
+
+main .functionality {
+  background-color: #181818;
+  width: 79%;
+  height: 100%;
+  padding: 30px;
+  border-top-right-radius: 20px;
+}
+
+main .functionality_title {
+  text-align: center;
+  font-family: "NokiaCellphone";
+  font-weight: normal;
+  color: white;
+  font-size: 40px;
+  margin: 0;
+  color: #e9d87c;
+}
+
+main .functionality_list {
+  width: 80%;
+  color: white;
+  font-family: 'Teko', sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.07em;
+  margin: 20px auto;
+}
+
+main .functionality_list dt {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.footer {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #2D2D2D;
+  border-bottom: 1px solid black;
+  padding: 5px 15px 5px 15px;
+}
+
+.footer_logo {
+  font-size: 70px;
+  font-family: 'HangingLetters';
+  color: white;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin: 0;
+  padding: 0;
+}
+
+.footer_logo a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer_logo a:hover {
+  cursor: pointer;
+  color: #e9d87c;
+}
+
+@media screen and (max-width: 600px) {
+  .footer_logo {
+    display: none;
+  }
+}
+
+.footer_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  width: 170px;
+}
+
+.footer_link-img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.footer_link-img:hover {
+  background-color: #e9d87c;
+}
+
+/* begin sign-in */
+.hidden {
+  visibility: hidden;
+}
+
+.g-signin-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 13px;
+  padding-right: 15px;
+}
+
+.signOut {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  height: 23px;
+  width: 53px;
+  background-color: #ffd700;
+  color: black;
+  font-weight: bold;
+  padding: 5px;
+  cursor: pointer;
+  border: 2px solid #8a7e7e;
+}
+
+.signOut:hover {
+  background-color: #e9d87c;
+}
+
+.g-signin2 {
+  padding-right: 5px;
+  border-radius: 5px;
+}
+
+.abcRioButton {
+  width: 180px !important;
+}
+
+.abcRioButtonIcon {
+  display: none;
+}
+
+.abcRioButtonContentWrapper img {
+  margin-top: 3px;
+}
+
+.none-visible {
+  display: none;
+}
+
+.profileImage {
+  width: 30px;
+  height: 30px;
+}
+
+.profileName {
+  color: black;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.abcRioButtonContentWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: #ffd700;
+  color: black;
+}
+
+.abcRioButtonContentWrapper:hover {
+  cursor: pointer;
+  background-color: #e9d87c;
+}
+
+#not_signed_inlcwirerb2yqy {
+  font-weight: bold;
+}
+/*# sourceMappingURL=landing.css.map */

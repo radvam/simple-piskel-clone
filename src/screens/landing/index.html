@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="google-signin-scope" content="profile email" />
+  <meta name="google-signin-client_id"
+    content="944195906191-3nrrpsd4j3h4tpnp9voiq4tvpvpnrb7p.apps.googleusercontent.com" />
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <link href="https://fonts.googleapis.com/css?family=Teko&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="landing.css">
+  <title>Simple-piskel-clone</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <a class="header_link-logo" name="logo" href="./index.html">
+        <h1 class="header_logo">Piskel</h1>
+      </a>
+      <div class="header_buttons">
+        <div class="g-signin-wrapper">
+          <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+          <div id="signOut" class="hidden signOut" onclick="signOut();">Sign out</div>
+
+          <script>
+            function onSignIn(googleUser) {
+              document.querySelector('.abcRioButtonContents').classList.add('none-visible');
+              const profile = googleUser.getBasicProfile();
+              console.log(profile.getName());
+              const profileNameData = profile.getName();
+              const icon = document.querySelector('.abcRioButtonContentWrapper');
+              const profileImage = document.createElement('img');
+              profileImage.classList.add('profileImage');
+              icon.appendChild(profileImage);
+              profileImage.src = profile.getImageUrl();
+
+              const profileName = document.createElement('span');
+              profileName.classList.add('profileName');
+              profileName.innerHTML = profileNameData;
+              icon.appendChild(profileName);
+
+              document.getElementById('signOut').classList.remove('hidden');
+            }
+            function signOut() {
+              var auth2 = gapi.auth2.getAuthInstance();
+              auth2.signOut().then(function () {
+                document.getElementById('signOut').classList.add('hidden');
+                const icon = document.querySelector('.abcRioButtonContentWrapper');
+                const profileImage = document.querySelector('.abcRioButtonContentWrapper img');
+                const profileName = document.querySelector('.profileName');
+                icon.removeChild(profileImage);
+                icon.removeChild(profileName);
+                document.querySelector('.abcRioButtonContents').classList.remove('none-visible');
+              });
+            }
+          </script>
+        </div>
+        <a href="./piskel.html"><button class="header_sprite-button">Create Sprite</button></a>
+      </div>
+    </header>
+    <main>
+      <section class="screenshots">
+        <div class="screenshots_info block-title">
+          <p class="block-title_text"><span class="block-title_simple-piskel">Simple-Piskel-Clone</span><br> simplified
+            version of the free online editor
+            for animated sprites & pixel art</p>
+          <p class="block-title_nav">
+            <a href="./piskel.html">
+              <button class="screenshots_sprite-button">Create Sprite</button>
+            </a>
+          </p>
+        </div>
+        <div class="screenshots_img"></div>
+      </section>
+      <section class="animations">
+        <h2 class="animations_title">Examples animated sprites</h2>
+        <div class="animations_sprites sprite">
+          <div class="sprite_item-bg">
+            <div class="sprite_item first-sprite"></div>
+          </div>
+          <div class="sprite_item-bg">
+            <div class="sprite_item second-sprite"></div>
+          </div>
+          <div class="sprite_item-bg">
+            <div class="sprite_item third-sprite"></div>
+          </div>
+          <div class="sprite_item-bg">
+            <div class="sprite_item fourth-sprite"></div>
+          </div>
+        </div>
+      </section>
+      <section class="functionality">
+        <h2 class="functionality_title">Implemented functionality overview</h2>
+        <dl class="functionality_list">
+          <dt>Tools</dt>
+          <dd>Implemented drawing tools such as pencil, paint bucket, color select, eraser, ...</dd>
+          <dt>Live preview</dt>
+          <dd>Check a preview of your animation in real time as you draw. Adjust the frame delay on the fly.</dd>
+          <dt>Export to GIF</dt>
+          <dd>Implemented the ability to export in GIF format</dd>
+          <dt>Google Sign in</dt>
+          <dd>No need to remember yet another password, just use your Google account to sign in.</dd>
+        </dl>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer_author">&copy; Dmitry Radkovets</p>
+      <p class="footer_links">
+        <span><a href="https://github.com/radvam" target="_blank"><img class="footer_link-img"
+              src="assets/images/icon-GitHub.png"></a></span>
+        <span><a href="https://t.me/dimrad1" target="_blank"><img class="footer_link-img"
+              src="assets/images/icon-telegram.png"></a></span>
+        <span><a href="https://www.linkedin.com/in/dmitry-radkovets" target="_blank"><img class="footer_link-img"
+              src="assets/images/icon-linkedin.png"></a></span>
+      </p>
+      <p class="footer_logo"><a href="#logo">Piskel</a></p>
+    </footer>
+  </div>
+</body>
+
+</html>
